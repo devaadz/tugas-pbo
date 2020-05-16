@@ -1,0 +1,40 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package controler;
+
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import view.*;
+import MVC.*;
+
+/**
+ *
+ * @author PC
+ */
+public class ControlerTampilanAdmin {
+    ViewTampilanAdmin PreInputGaji;
+    public ControlerTampilanAdmin(ViewTampilanAdmin view) {
+       view.btnLihatPanel.addActionListener(new ActionListener() {
+
+           @Override
+           public void actionPerformed(ActionEvent ae) {
+              view.setVisible(false);
+              MvcInputGaji gaji = new MvcInputGaji();
+           }
+       });
+       view.btnInputPanel.addActionListener(new ActionListener (){
+           @Override
+           public void actionPerformed(ActionEvent ae) {
+               view.setVisible(false);
+               MvcInputDataKariawan input = new MvcInputDataKariawan();
+              
+           }
+       });
+       
+    }
+    
+}
